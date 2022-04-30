@@ -7,10 +7,11 @@ cd $HOME
 
 # OSチェック
 if [ "$(uname)" != "Darwin" ] ; then
-	echo "Mac OSでしかこのスクリプトは動作しません。"
+	echo "このスクリプトはMac OSでのみ動作します。"
 	exit 1
 fi
 
+# 参考: https://zenn.dev/watsuyo_2/articles/734f3bf537b7ad
 # Homebrewをインストールする
 if [ ! -f /opt/homebrew/bin/brew ]
 	then
@@ -60,6 +61,11 @@ brew bundle -v --file=$HOME/dotfiles/Brewfile
 # 設定ファイルのシンボリックリンク設定(Stow)
 stow -v $HOME/dotfiles/git $HOME/dotfiles/karabiner $HOME/dotfiles/kitty $HOME/dotfiles/zsh
 
-# OSの設定
+# Mac OSの設定
+sh $HOME/dotfiles/setup/scripts/defaults.sh
 
-# asdfでFlutter, Nodeインストールなど
+# asdfインストール
+sh $HOME/dotfiles/setup/scripts/asdf.sh
+
+# fvmインストール
+sh $HOME/dotfiles/setup/scripts/fvm.sh
