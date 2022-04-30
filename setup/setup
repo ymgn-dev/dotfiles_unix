@@ -6,8 +6,8 @@ set -eu
 cd $HOME
 
 # OSチェック
-if [ "$(uname)" != "Darwin" ] ; then
-	echo "このスクリプトはMac OSでのみ動作します。"
+if [ "$(uname -m)" != "arm64" ] ; then
+	echo "このスクリプトはAppleシリコンを搭載したMac OSでのみ動作します。"
 	exit 1
 fi
 
