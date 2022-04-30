@@ -5,6 +5,12 @@ set -eu
 
 cd $HOME
 
+# OSチェック
+if [ "$(uname)" != "Darwin" ] ; then
+	echo "Mac OSでしかこのスクリプトは動作しません。"
+	exit 1
+fi
+
 # Homebrewをインストールする
 if [ ! -f /opt/homebrew/bin/brew ]
 	then
@@ -47,11 +53,13 @@ if [ ! -d $HOME/dotfiles ]
 		esac
 fi
 
+# Brewfileのインストール
 echo "ソフトウェアやツールをインストールしています..."
 brew bundle -v --file=$HOME/dotfiles/Brewfile
 
-if [ ! -d ~/.config ]
-	then
-		echo "$HOME/.configディレクトリを作成しています..."
-		mkdir $HOME/.config
-fi
+# 設定ファイルのシンボリックリンク設定(Stow)
+stow -v $HOME/dotfiles/git $HOME/dotfiles/karabiner $HOME/dotfiles/kitty $HOME/dotfiles/zsh
+
+# OSの設定
+
+# asdfでFlutter, Nodeインストールなど
