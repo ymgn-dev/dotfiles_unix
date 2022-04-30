@@ -1,0 +1,43 @@
+#!/bin/sh
+
+# エラーや未定義変数への参照があれば即終了
+set -eu
+
+cd $HOME
+
+# Homebrewをインストールする
+if [ ! -f /opt/homebrew/bin/brew ]
+    then
+		echo "Homebrewをインストールしています..."
+		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	else
+		echo "Homebrewは既にインストールされています。"
+fi
+
+# dotfilesをクローンする
+if [ ! -d $HOME/dotfiles ]
+	then
+		cd $HOME/.ssh
+		ssh-keygen -t ed25519 -C "yamagen.private@example.com"
+		pbcopy < ~/.ssh/id_rsa.pub
+		echo "公開鍵をGitHubに登録しましたか？[y/n]"
+		select yn in "y"; do
+			case $yn in
+				y ) break;;
+			esac
+		done
+
+		echo "dotfilesをダウンロードしています..."
+		git clone git@github.com:ymgn9314/dotfiles.git
+	else
+		echo "dotfilesは既にダウンロードされています。"
+fi
+
+echo "ソフトウェアやツールをインストールしています..."
+brew bundle -v --file=$HOME/dotfiles/Brewfile
+
+if [ ! -d ~/.config ]
+	then
+		echo "$HOME/.configディレクトリを作成しています..."
+		mkdir $HOME/.config
+fi
