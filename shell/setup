@@ -18,8 +18,6 @@ fi
 if [ ! -d $HOME/dotfiles ]
 	then
 		cd $HOME/.ssh
-		ssh-keygen -t ed25519 -C "yamagen.private@example.com"
-		pbcopy < ~/.ssh/id_rsa.pub
 		echo "公開鍵をGitHubに登録しましたか？[y/N]"
 		read answer
 		case $answer in
@@ -27,6 +25,9 @@ if [ ! -d $HOME/dotfiles ]
 			;;
 		* )
 			echo "公開鍵をGitHubに登録してからやり直してください。"
+			echo "1. ssh-keygen -t ed25519 -C YOUR_EMAIL_ADDRESS"
+			echo "2. pbcopy < ~/.ssh/id_rsa.pub"
+			echo "詳細は https://docs.github.com/ja/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account を確認してください。"
 			;;
 		esac
 
