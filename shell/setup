@@ -7,7 +7,7 @@ cd $HOME
 
 # Homebrewをインストールする
 if [ ! -f /opt/homebrew/bin/brew ]
-    then
+	then
 		echo "Homebrewをインストールしています..."
 		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	else
