@@ -1,16 +1,14 @@
-brew 'mas'
-
 tap "dart-lang/dart"
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "leoafarias/fvm"
-tap "sanemat/font"
 
 brew "asdf"
 brew "cocoapods"
+brew "mas"
 brew "leoafarias/fvm/fvm"
-brew "sanemat/font/ricty"
 
 cask "affinity-designer"
 cask "android-studio"
@@ -18,6 +16,7 @@ cask "brave-browser"
 cask "cleanmymac"
 cask "cleanshot"
 cask "figma"
+cask "font-ricty-diminished"
 cask "fork"
 cask "google-chrome"
 cask "karabiner-elements"
