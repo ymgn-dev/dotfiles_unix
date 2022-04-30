@@ -8,6 +8,7 @@ tap "leoafarias/fvm"
 brew "asdf"
 brew "cocoapods"
 brew "mas"
+brew "stow"
 brew "leoafarias/fvm/fvm"
 
 cask "affinity-designer"
