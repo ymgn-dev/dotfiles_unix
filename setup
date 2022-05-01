@@ -61,14 +61,15 @@ brew bundle -v --file=$HOME/dotfiles/Brewfile
 # 設定ファイルのシンボリックリンク設定(Stow)
 stow -v $HOME/dotfiles/git $HOME/dotfiles/karabiner $HOME/dotfiles/kitty $HOME/dotfiles/zsh
 
-# Rosetta 2のインストール(asdf, fvmの操作でRosetta 2が必要になるため必ず先に実行すること)
-sh $HOME/dotfiles/installs/rosetta.sh
+# Rosetta 2のインストール
+# asdf, fvmの操作でRosetta 2が必要になるため必ず先に実行すること
+sh $HOME/dotfiles/sh/rosetta.sh
 
 # Mac OSの設定
-sh $HOME/dotfiles/installs/defaults.sh
+sh $HOME/dotfiles/sh/defaults.sh
 
 # asdfインストール
-sh $HOME/dotfiles/installs/asdf.sh
+sh $HOME/dotfiles/sh/asdf.sh
 
 # fvmインストール
-sh $HOME/dotfiles/installs/fvm.sh
+sh $HOME/dotfiles/sh/fvm.sh
