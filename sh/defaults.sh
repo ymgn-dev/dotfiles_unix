@@ -1,3 +1,5 @@
+# 参考: https://github.com/ulwlu/dotfiles/blob/master/system/macos.sh
+
 # 起動音無効化
 sudo nvram SystemAudioVolume=" "
 
@@ -52,3 +54,7 @@ defaults write -g com.apple.trackpad.forceClick 0
 # トラッキング速度
 # 0: Slow, 3: Fast
 defaults write -g com.apple.trackpad.scaling 3
+
+# できていないこと
+echo "キーボードショートカットを全て無効にするには、"
+echo "システム設定 > キーボード > ショートカットのチェックを全て外してください。"

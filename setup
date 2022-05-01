@@ -65,7 +65,7 @@ stow -v $HOME/dotfiles/git $HOME/dotfiles/karabiner $HOME/dotfiles/kitty $HOME/d
 # asdf, fvmの操作でRosetta 2が必要になるため必ず先に実行すること
 sh $HOME/dotfiles/sh/rosetta.sh
 
-# Mac OSの設定
+# システム設定
 sh $HOME/dotfiles/sh/defaults.sh
 
 # asdfインストール
