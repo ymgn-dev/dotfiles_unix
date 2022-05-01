@@ -3,6 +3,8 @@
 # エラーや未定義変数への参照があれば即終了
 set -eu
 
+DOTFILES_DIR=$HOME/dotfiles
+
 cd $HOME
 
 # OSチェック
@@ -22,7 +24,7 @@ if [ ! -f /opt/homebrew/bin/brew ]
 fi
 
 # dotfilesをクローンする
-if [ ! -d $HOME/dotfiles ]
+if [ ! -d $DOTFILES_DIR ]
 	then
 		cd $HOME/.ssh
 		echo "公開鍵をGitHubに登録しましたか？[y/N]"
@@ -56,20 +58,20 @@ fi
 
 # Brewfileのインストール
 echo "ソフトウェアやツールをインストールしています..."
-brew bundle -v --file=$HOME/dotfiles/Brewfile
+brew bundle -v --file=$DOTFILES_DIR/Brewfile
 
 # 設定ファイルのシンボリックリンク設定(Stow)
-stow -v $HOME/dotfiles/git $HOME/dotfiles/karabiner $HOME/dotfiles/kitty $HOME/dotfiles/zsh
+stow -v $DOTFILES_DIR/git $DOTFILES_DIR/hammerspoon $DOTFILES_DIR/karabiner $DOTFILES_DIR/kitty $DOTFILES_DIR/zsh
 
 # Rosetta 2のインストール
 # asdf, fvmの操作でRosetta 2が必要になるため必ず先に実行すること
-sh $HOME/dotfiles/sh/rosetta.sh
+sh $DOTFILES_DIR/sh/rosetta.sh
 
 # システム設定
-sh $HOME/dotfiles/sh/defaults.sh
+sh $DOTFILES_DIR/sh/defaults.sh
 
 # asdfインストール
-sh $HOME/dotfiles/sh/asdf.sh
+sh $DOTFILES_DIR/sh/asdf.sh
 
 # fvmインストール
-sh $HOME/dotfiles/sh/fvm.sh
+sh $DOTFILES_DIR/sh/fvm.sh

@@ -1,4 +1,6 @@
-# 参考: https://github.com/ulwlu/dotfiles/blob/master/system/macos.sh
+# 参考:
+# https://github.com/ulwlu/dotfiles/blob/master/system/macos.sh
+# https://macos-defaults.com/
 
 # 起動音無効化
 sudo nvram SystemAudioVolume=" "
@@ -19,9 +21,12 @@ defaults write com.apple.finder DisableAllAnimations -bool true
 
 # Dockが表示されるアニメーション時間
 # 秒数を指定する
-defaults write com.apple.dock autohide-time-modifier -float 0
+defaults write com.apple.dock autohide-time-modifier -float 0.4
 # ↓デフォルト値に戻す
 # defaults delete com.apple.dock autohide-time-modifier
+
+# Dockに最近使用したアプリを表示しない
+defaults write com.apple.dock show-recents -bool false
 
 # Finderのパスバー表示
 defaults write com.apple.finder ShowPathbar -bool true
@@ -31,6 +36,9 @@ defaults write com.apple.finder ShowTabView -bool true
 
 # Finderのステータスバー表示
 defaults write com.apple.finder ShowStatusBar -bool true
+
+# ファイルの拡張子表示
+defaults write -g AppleShowAllExtensions -bool true
 
 # ゴミ箱を空にする前の警告無効化
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
@@ -58,3 +66,5 @@ defaults write -g com.apple.trackpad.scaling 3
 # できていないこと
 echo "キーボードショートカットを全て無効にするには、"
 echo "システム設定 > キーボード > ショートカットのチェックを全て外してください。"
+echo ""
+echo "また、設定を反映するためには、再起動が必要です。"
