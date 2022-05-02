@@ -52,7 +52,7 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 # バッテリー%表示を有効にする
 defaults write ~/Library/Preferences/ByHost/com.apple.controlcenter.plist BatteryShowPercentage -bool true
 
-# ディスプレイ暗転までの時間
+# ディスプレイ暗転までの時間(分)
 sudo pmset -b displaysleep 3
 
 # トラックパッドのクリック強さ
