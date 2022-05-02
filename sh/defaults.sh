@@ -63,6 +63,14 @@ defaults write -g com.apple.trackpad.forceClick 0
 # 0: Slow, 3: Fast
 defaults write -g com.apple.trackpad.scaling 3
 
+# キーのリピート速度
+# 0: Slow, 15: Fast
+defaults write .GlobalPreferences InitialKeyRepeat -int 15
+
+# キーのリピート開始までの遅延速度
+# 0: Slow, 2: Fast
+defaults write .GlobalPreferences KeyRepeat -int 2
+
 # できていないこと
 echo "キーボードショートカットを全て無効にするには、"
 echo "システム設定 > キーボード > ショートカットのチェックを全て外してください。"
