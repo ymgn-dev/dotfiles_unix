@@ -8,3 +8,6 @@ if [ -d $ZSH_HOME -a -r $ZSH_HOME -a \
             [ \( -f $i -o -h $i \) -a -r $i ] && . $i
     done
 fi
+
+# Starship読み込み
+eval "$(starship init zsh)"
