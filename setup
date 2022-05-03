@@ -3,9 +3,11 @@
 # エラーや未定義変数への参照があれば即終了
 set -eu
 
-DOTFILES_DIR=$HOME/dotfiles
-
 cd $HOME
+
+DOTFILES_DIR=$HOME/dotfiles
+SHELL_DIR=$DOTFILES_DIR/sh
+SYMLINK_DIR=$DOTFILES_DIR/symlink
 
 # OSチェック
 if [ "$(uname -m)" != "arm64" ] ; then
@@ -37,6 +39,7 @@ if [ ! -d $DOTFILES_DIR ]
 			echo "1. ssh-keygen -t ed25519 -C YOUR_EMAIL_ADDRESS"
 			echo "2. pbcopy < ~/.ssh/id_rsa.pub"
 			echo "詳細は https://docs.github.com/ja/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account を確認してください。"
+			exit 0
 			;;
 		esac
 
@@ -60,18 +63,22 @@ fi
 echo "ソフトウェアやツールをインストールしています..."
 brew bundle -v --file=$DOTFILES_DIR/Brewfile
 
-# 設定ファイルのシンボリックリンク設定(Stow)
-stow -v $DOTFILES_DIR/git $DOTFILES_DIR/hammerspoon $DOTFILES_DIR/karabiner $DOTFILES_DIR/kitty $DOTFILES_DIR/zsh
+# 設定ファイルのシンボリックリンク作成(Stow)
+SYMLINKS=`find $SYMLINK_DIR -depth 1 -type d`
+for symlink in $SYMLINKS;
+do
+	stow -v $symlink
+done
 
 # Rosetta 2のインストール
 # asdf, fvmの操作でRosetta 2が必要になるため必ず先に実行すること
-sh $DOTFILES_DIR/sh/rosetta.sh
+sh $SHELL_DIR/rosetta.sh
 
 # システム設定
-sh $DOTFILES_DIR/sh/defaults.sh
+sh $SHELL_DIR/defaults.sh
 
 # asdfインストール
-sh $DOTFILES_DIR/sh/asdf.sh
+sh $SHELL_DIR/asdf.sh
 
 # fvmインストール
-sh $DOTFILES_DIR/sh/fvm.sh
+sh $SHELL_DIR/fvm.sh
