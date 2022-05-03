@@ -22,7 +22,6 @@ zinit light-mode for \
 
 # zinitプラグイン
 # 参考: https://qiita.com/YUM_3/items/31ed30782f160ffd6f82
-zinit ice depth=1; zinit light romkatv/powerlevel10k
 zinit light marlonrichert/zsh-autocomplete
 zinit light zsh-users/zsh-completions
 # zinit light zsh-users/zsh-autosuggestions
