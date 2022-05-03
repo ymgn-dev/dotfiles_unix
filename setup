@@ -61,7 +61,7 @@ fi
 
 # Brewfileのインストール
 echo "ソフトウェアやツールをインストールしています..."
-brew bundle -v --file=$DOTFILES_DIR/Brewfile
+brew bundle --file=$DOTFILES_DIR/Brewfile
 
 # 設定ファイルのシンボリックリンク作成(Stow)
 SYMLINKS=`find $SYMLINK_DIR -depth 1 -type d`
