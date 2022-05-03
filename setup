@@ -15,6 +15,18 @@ if [ "$(uname -m)" != "arm64" ] ; then
 	exit 1
 fi
 
+# App Storeログインチェック
+echo "App Storeへログインしましたか？[y/N]"
+read answer
+case $answer in
+[Yy]* )
+	;;
+* )
+	echo "先にApp Storeにログインしてから再度実行してください。"
+	exit 0
+	;;
+esac
+
 # 参考: https://zenn.dev/watsuyo_2/articles/734f3bf537b7ad
 # Homebrewをインストールする
 if [ ! -f /opt/homebrew/bin/brew ]
