@@ -4,6 +4,7 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - name: Run setup
+      - name: Initialize environment
         uses: actions/checkout@v3
-        run: sh setup
+      - name: Run setup
+      - run: sh setup
