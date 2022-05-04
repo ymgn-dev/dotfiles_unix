@@ -5,5 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run setup
-      - uses: actions/checkout@v3
-      - run: sh setup
+        uses: actions/checkout@v3
+        run: sh setup
