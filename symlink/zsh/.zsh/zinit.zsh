@@ -26,10 +26,7 @@ zinit light-mode for \
 # zinit light marlonrichert/zsh-autocomplete
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
-autoload -U compinit; compinit -u
-
 zinit light zdharma-continuum/fast-syntax-highlighting
-
 zinit ice as"program" from"gh-r" mv"bat* -> bat" pick"bat/bat"
 zinit light sharkdp/bat
 

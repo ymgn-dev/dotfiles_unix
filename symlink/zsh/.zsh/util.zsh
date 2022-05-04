@@ -17,7 +17,10 @@ setopt hist_save_no_dups
 setopt hist_expire_dups_first
 
 # カラー表示を有効にする
-autoload -Uz colors; colors
+autoload -Uz colors && colors
+
+# 補完機能を有効にする
+autoload -Uz compinit && compinit
 
 # 補完候補の大文字と小文字を区別しない
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' '+m:{[:upper:]}={[:lower:]}'
