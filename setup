@@ -40,7 +40,6 @@ fi
 # dotfilesをクローンする
 if [ ! -d $DOTFILES_DIR ]
 	then
-		cd $HOME/.ssh
 		echo "公開鍵をGitHubに登録しましたか？[y/N]"
 		read answer
 		case $answer in
@@ -76,11 +75,10 @@ echo "ソフトウェアやツールをインストールしています..."
 brew bundle --file=$DOTFILES_DIR/Brewfile
 
 # 設定ファイルのシンボリックリンク作成(Stow)
-SYMLINKS=`find $SYMLINK_DIR -depth 1 -type d`
-for symlink in $SYMLINKS;
-do
-	stow -v $symlink
-done
+# https://metacpan.org/dist/Stow/view/bin/stow
+stow -d $SYMLINK_DIR -t $HOME --stow `ls $SYMLINK_DIR`
+# ↓リンクを解除する
+# stow -d $SYMLINK_DIR -t $HOME --delete `ls $SYMLINK_DIR`
 
 # Rosetta 2のインストール
 # asdf, fvmの操作でRosetta 2が必要になるため必ず先に実行すること

@@ -1,5 +1,5 @@
 # https://github.com/jthegedus/asdf-firebase
-asdf plugin add https://github.com/jthegedus/asdf-firebase.git
+asdf plugin add firebase https://github.com/jthegedus/asdf-firebase.git
 asdf install firebase latest
 asdf global firebase latest
 
