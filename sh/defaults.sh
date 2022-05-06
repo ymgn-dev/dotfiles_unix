@@ -40,6 +40,9 @@ defaults write com.apple.finder ShowStatusBar -bool true
 # ファイルの拡張子表示
 defaults write -g AppleShowAllExtensions -bool true
 
+# 隠しファイル表示
+defaults write com.apple.finder AppleShowAllFiles true
+
 # ゴミ箱を空にする前の警告無効化
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
