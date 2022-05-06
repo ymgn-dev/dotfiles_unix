@@ -1,11 +1,11 @@
-<?xml version="1.0"?>
+<?xml version="1.0" standalone="yes"?>
 <!DOCTYPE database SYSTEM "file:///System/Library/DTDs/CoreData.dtd">
 
 <database>
     <databaseInfo>
         <version>134481920</version>
         <UUID>FAF8E47A-812D-488A-9A05-284FBDC70202</UUID>
-        <nextObjectID>103</nextObjectID>
+        <nextObjectID>104</nextObjectID>
         <metadata>
             <plist version="1.0">
                 <dict>
@@ -67,6 +67,20 @@
         <attribute name="displayid" type="int32">2</attribute>
         <attribute name="builtin" type="bool">0</attribute>
         <attribute name="uniqueidentifier" type="string">31FD2DB5-3487-4101-87A6-B00CB464DD46</attribute>
+        <relationship name="displayeddragpoints" type="0/0" destination="BSTDRAGPOINT"></relationship>
+        <relationship name="snappeddragpoints" type="0/0" destination="BSTDRAGPOINT"></relationship>
+    </object>
+    <object type="BSTCDISPLAY" id="z104">
+        <attribute name="vendor" type="int32">8950</attribute>
+        <attribute name="serialnumber" type="string">16843009</attribute>
+        <attribute name="screensize" type="string">{530.08694856063175, 301.45054492321646}</attribute>
+        <attribute name="screenframe" type="string">{{1440, -180}, {1920, 1080}}</attribute>
+        <attribute name="resolution" type="string">{1920, 1080}</attribute>
+        <attribute name="model" type="int32">9218</attribute>
+        <attribute name="maindisplay" type="int32">0</attribute>
+        <attribute name="displayid" type="int32">2</attribute>
+        <attribute name="builtin" type="bool">0</attribute>
+        <attribute name="uniqueidentifier" type="string">1734A3C7-79D3-4D57-B6D3-9C9C67F26943</attribute>
         <relationship name="displayeddragpoints" type="0/0" destination="BSTDRAGPOINT"></relationship>
         <relationship name="snappeddragpoints" type="0/0" destination="BSTDRAGPOINT"></relationship>
     </object>
