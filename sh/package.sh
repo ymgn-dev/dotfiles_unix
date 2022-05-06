@@ -15,4 +15,4 @@ npm install -g firebase-tools
 /usr/sbin/softwareupdate --install-rosetta --agree-to-license
 
 # openjdk
-sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+sudo ln -sfn /opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
