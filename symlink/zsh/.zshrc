@@ -9,5 +9,5 @@ if [ -d $ZSH_HOME -a -r $ZSH_HOME -a \
     done
 fi
 
-# Starship読み込み
+# starship読み込み
 eval "$(starship init zsh)"

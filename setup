@@ -92,3 +92,6 @@ sh $SHELL_DIR/asdf.sh
 
 # fvmインストール
 sh $SHELL_DIR/fvm.sh
+
+# openjdkパスシンボリックリンク設定
+sh $SHELL_DIR/openjdk.sh
