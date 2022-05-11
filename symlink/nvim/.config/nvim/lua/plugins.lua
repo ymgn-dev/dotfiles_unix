@@ -10,10 +10,24 @@ local function init()
   local use = packer.use
   packer.reset()
 
-  use {'wbthomason/packer.nvim', opt = true}
+  use { 'wbthomason/packer.nvim', opt = true }
+  use 'nvim-treesitter/nvim-treesitter'
+  use 'kyazdani42/nvim-web-devicons'
+  use {
+    'EdenEast/nightfox.nvim',
+    config = function()
+      vim.cmd('colorscheme nightfox')
+    end
+  }
+  use {
+    'nvim-lualine/lualine.nvim',
+    config = function()
+      require('lualine').setup()
+    end,
+  }
   use {
     'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'}, {'nvim-treesitter/nvim-treesitter'}, {'kyazdani42/nvim-web-devicons'} }
+    requires = { 'nvim-lua/plenary.nvim' }
   }
 end
 
