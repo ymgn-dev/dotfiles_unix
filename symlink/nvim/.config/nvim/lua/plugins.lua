@@ -11,6 +11,10 @@ local function init()
   packer.reset()
 
   use {'wbthomason/packer.nvim', opt = true}
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { {'nvim-lua/plenary.nvim'}, {'nvim-treesitter/nvim-treesitter'} }
+  }
 end
 
 local plugins = setmetatable({}, {
