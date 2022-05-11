@@ -13,7 +13,7 @@ local function init()
   use {'wbthomason/packer.nvim', opt = true}
   use {
     'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'}, {'nvim-treesitter/nvim-treesitter'} }
+    requires = { {'nvim-lua/plenary.nvim'}, {'nvim-treesitter/nvim-treesitter'}, {'kyazdani42/nvim-web-devicons'} }
   }
 end
 
