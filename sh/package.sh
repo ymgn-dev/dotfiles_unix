@@ -8,6 +8,15 @@ asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 asdf install nodejs 16.15.0
 asdf global nodejs 16.15.0
 
+# https://github.com/danhper/asdf-python
+asdf plugin-add python
+asdf install python 3.10.5
+asdf global python 3.10.5
+asdf reshim python
+pip install --upgrade pip
+pip install pipenv
+asdf reshim python
+
 # fvm
 fvm install 2.10.5
 fvm global 2.10.5
