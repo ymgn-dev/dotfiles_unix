@@ -23,6 +23,9 @@ asdf reshim python
 fvm install 2.10.5
 fvm global 2.10.5
 
+# mason-cli
+dart pub global activate mason_cli
+
 # firebase-cli
 npm install -g firebase-tools
 

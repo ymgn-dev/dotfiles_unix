@@ -80,6 +80,8 @@ stow -d $SYMLINK_DIR -t $HOME --stow `ls $SYMLINK_DIR`
 # ↓リンクを解除する
 # stow -d $SYMLINK_DIR -t $HOME --delete `ls $SYMLINK_DIR`
 
+source ~/.zshrc
+
 # ツール・パッケージ類のインストール
 sh $SHELL_DIR/package.sh
 
