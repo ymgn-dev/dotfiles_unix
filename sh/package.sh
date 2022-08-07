@@ -7,6 +7,8 @@
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 asdf install nodejs 16.15.0
 asdf global nodejs 16.15.0
+corepack enable
+asdf reshim nodejs
 
 # https://github.com/danhper/asdf-python
 asdf plugin-add python
