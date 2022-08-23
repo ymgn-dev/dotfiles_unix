@@ -2,6 +2,10 @@
 # asdf, fvmの操作でRosetta 2が必要になるため必ず先に実行すること
 /usr/sbin/softwareupdate --install-rosetta --agree-to-license
 
+# Rust
+curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+source "$HOME/.cargo/env"
+
 # asdf
 # https://github.com/asdf-vm/asdf-nodejs
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
