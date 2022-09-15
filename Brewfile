@@ -34,6 +34,7 @@ cask "notion"
 cask "slack"
 cask "visual-studio-code"
 cask "zoom"
+cask "zulip"
 mas "BetterSnapTool", id: 417375580
 mas "Bitwarden", id: 1352778147
 mas "Xcode", id: 497799835
