@@ -4,6 +4,7 @@ tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "leoafarias/fvm"
+tap "michaeleisel/zld" # Fast linker for Rust. See https://bevyengine.org/learn/book/getting-started/setup/
 brew "asdf"
 brew "cmake" # Cross-platform make(Used by Aseprite)
 brew "cocoapods"

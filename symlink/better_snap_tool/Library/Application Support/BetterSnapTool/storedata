@@ -74,7 +74,7 @@
         <attribute name="vendor" type="int32">8950</attribute>
         <attribute name="serialnumber" type="string">16843009</attribute>
         <attribute name="screensize" type="string">{530.08694856063175, 301.45054492321646}</attribute>
-        <attribute name="screenframe" type="string">{{1440, -180}, {1920, 1080}}</attribute>
+        <attribute name="screenframe" type="string">{{1440, -39}, {1920, 1080}}</attribute>
         <attribute name="resolution" type="string">{1920, 1080}</attribute>
         <attribute name="model" type="int32">9218</attribute>
         <attribute name="maindisplay" type="int32">0</attribute>
