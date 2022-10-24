@@ -22,6 +22,7 @@ brew "tree" # Display directories as trees (with optional color/HTML output)
 brew "leoafarias/fvm/fvm"
 cask "affinity-designer"
 cask "android-studio"
+cask "blender"
 cask "cleanmymac"
 cask "cleanshot"
 cask "docker"
