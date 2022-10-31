@@ -24,6 +24,7 @@ brew "leoafarias/fvm/fvm"
 brew "michaeleisel/zld/zld" # Fast linker for Rust. See https://bevyengine.org/learn/book/getting-started/setup/
 cask "affinity-designer"
 cask "android-studio"
+cask "audacity"
 cask "blender"
 cask "cleanmymac"
 cask "cleanshot"
