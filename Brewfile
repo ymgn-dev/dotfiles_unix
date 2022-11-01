@@ -14,7 +14,6 @@ brew "jq" # Lightweight and flexible command-line JSON processor(Used by Aseprit
 brew "mas" # Mac App Store command-line interface
 brew "ninja" # Small build system for use with gyp or CMake(Used by Aseprite)
 brew "openjdk@11"
-brew "postgresql@14"
 brew "ripgrep" # Search tool like grep and The Silver Searcher
 brew "rust-analyzer"
 brew "starship"
@@ -28,7 +27,6 @@ cask "audacity"
 cask "blender"
 cask "cleanmymac"
 cask "cleanshot"
-cask "docker"
 cask "figma"
 cask "font-hack-nerd-font"
 cask "font-ricty-diminished"
