@@ -31,7 +31,6 @@ cask "figma"
 cask "font-hack-nerd-font"
 cask "font-ricty-diminished"
 cask "fork"
-cask "godot"
 cask "google-chrome"
 cask "google-cloud-sdk"
 cask "inkscape"
@@ -46,8 +45,9 @@ cask "steam"
 cask "unity-hub"
 cask "visual-studio-code"
 cask "zoom"
-cask "zulip"
 mas "Bitwarden", id: 1352778147
-mas "Xcode", id: 497799835
+mas "Keynote", id: 409183694
 mas "LINE", id: 539883307
+mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "Xcode", id: 497799835
