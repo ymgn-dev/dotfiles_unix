@@ -9,23 +9,23 @@ source "$HOME/.cargo/env"
 # asdf
 # https://github.com/asdf-vm/asdf-nodejs
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-asdf install nodejs 16.15.0
-asdf global nodejs 16.15.0
+asdf install nodejs 19.0.1
+asdf global nodejs 19.0.1
 corepack enable
 asdf reshim nodejs
 
 # https://github.com/danhper/asdf-python
 asdf plugin-add python
-asdf install python 3.10.5
-asdf global python 3.10.5
+asdf install python 3.11.0
+asdf global python 3.11.0
 asdf reshim python
 pip install --upgrade pip
 pip install pipenv
 asdf reshim python
 
 # fvm
-fvm install 2.10.5
-fvm global 2.10.5
+fvm install 3.3.7
+fvm global 3.3.7
 
 # mason-cli
 dart pub global activate mason_cli
