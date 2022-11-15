@@ -24,8 +24,8 @@ pip install pipenv
 asdf reshim python
 
 # fvm
-fvm install 3.3.7
-fvm global 3.3.7
+fvm install 3.3.8
+fvm global 3.3.8
 
 # mason-cli
 dart pub global activate mason_cli
