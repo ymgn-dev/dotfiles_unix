@@ -40,6 +40,7 @@ cask "karabiner-elements"
 cask "krita"
 cask "mono-mdk" # For Unity
 cask "notion"
+cask "pgadmin4"
 cask "raycast"
 cask "slack"
 cask "steam"
