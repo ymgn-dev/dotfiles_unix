@@ -12,8 +12,3 @@ alias gps="git push"
 alias gc="git commit"
 alias gcm="git commit -m"
 alias ga="git add"
-
-# postgresql
-alias pgs="brew services start postgresql"
-alias pgrs="brew services restart postgresql"
-alias pgq="brew services stop postgresql"

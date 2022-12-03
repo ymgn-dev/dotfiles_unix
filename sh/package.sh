@@ -24,15 +24,17 @@ pip install pipenv
 asdf reshim python
 
 # fvm
-fvm install 3.3.8
-fvm global 3.3.8
+fvm install 3.3.9
+fvm global 3.3.9
 
 # mason-cli
 dart pub global activate mason_cli
+
+# FlutterFire-cli
+dart pub global activate flutterfire_cli
 
 # firebase-cli
 npm install -g firebase-tools
 
 # openjdk
-# sudo ln -sfn $(brew --prefix)/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
 sudo ln -sfn /opt/homebrew/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
