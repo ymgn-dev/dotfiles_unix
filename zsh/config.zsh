@@ -24,6 +24,5 @@ setopt auto_cd
 setopt no_beep
 
 autoload -Uz colors && colors
-autoload -Uz compinit && compinit
 
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' '+m:{[:upper:]}={[:lower:]}'
