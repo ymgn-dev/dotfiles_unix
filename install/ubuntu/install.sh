@@ -1,4 +1,4 @@
-local DOTFILES_DIR=${HOME}/dotfiles
+DOTFILES_DIR=${HOME}/dotfiles
 . ${DOTFILES_DIR}/utils/utils.sh
 
 sudo apt install curl git

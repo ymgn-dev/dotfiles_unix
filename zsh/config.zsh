@@ -1,4 +1,4 @@
-local DOTFILES_DIR=${HOME}/dotfiles
+DOTFILES_DIR=${HOME}/dotfiles
 . ${DOTFILES_DIR}/utils/utils.sh
 
 if [ `check_os` = $OS_MAC ]; then
@@ -6,8 +6,6 @@ if [ `check_os` = $OS_MAC ]; then
     export PATH=$HOME/fvm/default/bin:$PATH
     export PATH=/opt/homebrew/opt/openjdk@11/bin:$PATH
     export PATH=/opt/homebrew/opt/postgresql@15/bin:$PATH
-    
-    export CPPFLAGS="-I/opt/homebrew/opt/openjdk@11/include"
 fi
 
 export LANG="en_US.UTF-8"
@@ -19,7 +17,7 @@ HISTSIZE=100
 
 SAVEHIST=1000
 
-setopt  hist_ignore_all_dups
+setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_expire_dups_first
 setopt auto_cd

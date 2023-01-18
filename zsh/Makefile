@@ -2,9 +2,8 @@ DOTFILES_DIR := ${HOME}/dotfiles
 
 .PHONY: init
 init:
-	ln -svf ${DOTFILES_DIR}/.zshrc ${HOME}/.zshrc && \
-	ln -svf ${DOTFILES_DIR}/.zprofile ${HOME}/.zprofile
-	source ${HOME}/.zshrc
+	ln -svf ${DOTFILES_DIR}/zsh/.zshrc ${HOME}/.zshrc && \
+	ln -svf ${DOTFILES_DIR}/zsh/.zprofile ${HOME}/.zprofile
 
 .PHONY: clean
 clean:

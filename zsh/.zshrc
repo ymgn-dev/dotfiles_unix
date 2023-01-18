@@ -5,6 +5,7 @@ if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
     command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
         print -P "%F{33} %F{34}Installation successful.%f%b" || \
         print -P "%F{160} The clone has failed.%f%b"
+
 fi
 
 source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
@@ -20,7 +21,7 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-rust
 ### End of Zinit's installer chunk
 
-local DOTFILES_DIR=${HOME}/dotfiles
+DOTFILES_DIR=${HOME}/dotfiles
 . ${DOTFILES_DIR}/utils/utils.sh
 
 for file in ${DOTFILES_DIR}/zsh/*.zsh; do
