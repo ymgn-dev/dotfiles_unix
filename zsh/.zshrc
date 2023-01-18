@@ -5,6 +5,7 @@ if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
     command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
         print -P "%F{33} %F{34}Installation successful.%f%b" || \
         print -P "%F{160} The clone has failed.%f%b"
+
 fi
 
 source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
@@ -20,15 +21,18 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-rust
 ### End of Zinit's installer chunk
 
-# zinitプラグイン
-# 参考: https://qiita.com/YUM_3/items/31ed30782f160ffd6f82
+DOTFILES_DIR=${HOME}/dotfiles
+. ${DOTFILES_DIR}/utils/utils.sh
 
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
-zinit light zdharma-continuum/fast-syntax-highlighting
-zinit ice as"program" from"gh-r" mv"bat* -> bat" pick"bat/bat"
-zinit light sharkdp/bat
+for file in ${DOTFILES_DIR}/zsh/*.zsh; do
+    source "$file"
+done
 
-if builtin command -v bat > /dev/null; then
-  alias cat="bat"
+eval "$(starship init zsh)"
+
+if [ `check_os` = $OS_MAC ]; then
+    . /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+    source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+    source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 fi
