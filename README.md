@@ -1,3 +1,3 @@
 ```sh
-/bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/ymgn9314/dotfiles/main/setup)"
+git clone https://github.com/ymgn9314/dotfiles.git ~/dotfiles && cd ~/dotfiles && make
 ```
