@@ -1,7 +1,3 @@
-# rosetta
-# asdf, fvmの操作でRosetta 2が必要になるため必ず先に実行すること
-/usr/sbin/softwareupdate --install-rosetta --agree-to-license
-
 # asdf
 # https://github.com/asdf-vm/asdf-nodejs
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
