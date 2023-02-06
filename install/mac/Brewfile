@@ -9,17 +9,23 @@ tap "leoafarias/fvm"
 # tools / libraries
 brew "asdf"
 brew "cocoapods"
+brew "coreutils"
+brew "curl"
 brew "fd" # Simple, fast and user-friendly alternative to find
+brew "git"
 brew "openjdk@11"
 brew "stow"
 brew "starship"
 brew "mas" # Mac App Store command-line interface
-brew "ripgrep" # Search tool like grep and The Silver Searcher
+brew "ripgrep" # Search tool like grep and The Silver Searfcher
 brew "tree" # Display directories as trees (with optional color/HTML output)
 brew "leoafarias/fvm/fvm"
 brew "postgresql@15"
 
 cask "google-cloud-sdk"
+
+# editor
+brew "neovim"
 
 # gui
 cask "android-studio"

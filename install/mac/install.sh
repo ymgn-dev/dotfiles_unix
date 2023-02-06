@@ -11,13 +11,6 @@ if ! command_exists brew; then
 fi
 source ${HOME}/.zshrc
 
-if ! command_exists asdf; then
-    echo "asdf not found! Installing..."
-	brew install coreutils curl git
-	brew install asdf
-fi
-source ${HOME}/.zshrc
-
 brew bundle --file=${DOTFILES_DIR}/install/mac/Brewfile
 source ${HOME}/.zshrc
 

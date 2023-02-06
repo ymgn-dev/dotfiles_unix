@@ -8,12 +8,13 @@ install:
 	cd install && make
 
 .PHONY: apply
-apply: zsh git
+apply: zsh git nvim
 
 .PHONY: clean
 clean:
 	cd zsh && make clean && \
 	cd ../git && make clean && \
+	cd ../nvim && make clean
 
 .PHONY: zsh
 zsh:
@@ -22,3 +23,7 @@ zsh:
 .PHONY: git
 git:
 	cd git && make
+
+.PHONY: nvim
+nvim:
+	cd nvim && make
