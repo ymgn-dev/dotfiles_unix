@@ -2,8 +2,13 @@ DOTFILES_DIR := ${HOME}/dotfiles
 
 .PHONY: init
 init:
-	ln -svf ${PWD}/.gitconfig ${HOME}/.gitconfig
+	[ -d ${HOME}.config/nvim/ ] || mkdir -p ${HOME}.config/nvim/
+	[ -d ${HOME}.config/nvim/lua/ ] || mkdir -p ${HOME}.config/nvim/lua/
+	ln -svf ${DOTFILES_DIR}/nvim/init.lua ${HOME}.config/nvim/init.lua && \
+	ln -svf ${DOTFILES_DIR}/nvim/lua/plugins.lua ${HOME}.config/nvim/lua/plugins.lua
 
 .PHONY: clean
 clean:
-	unlink ${HOME}/.gitconfig || true
+	unlink ${HOME}.config/nvim/init.lua || true && \
+	unlink ${HOME}.config/nvim/lua/plugins.lua || true
+	rm -rf ${HOME}.config/nvim/
