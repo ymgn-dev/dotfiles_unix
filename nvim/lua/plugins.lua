@@ -7,7 +7,7 @@ require("packer").startup(function()
   use "tpope/vim-fugitive"
   use "tpope/vim-repeat"
 
-  use "EdenEast/nightfox.nvim"
+  use { "EdenEast/nightfox.nvim", opt = true }
 
   -- opt オプションを付けると遅延読み込みになります。
   -- この場合は opt だけで読み込む契機を指定していないため、
@@ -15,3 +15,4 @@ require("packer").startup(function()
   use { "wbthomason/packer.nvim", opt = true }
   -- packer.nvim 自体を遅延読み込みにする理由はまた後ほど。
 end)
+

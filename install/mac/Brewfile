@@ -5,6 +5,7 @@ tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "leoafarias/fvm"
+tap "wez/wezterm"
 
 # tools / libraries
 brew "asdf"
@@ -45,6 +46,7 @@ cask "pgadmin4"
 cask "slack"
 cask "tableplus"
 cask "visual-studio-code"
+cask "wezterm"
 cask "zoom"
 
 # languages
