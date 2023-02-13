@@ -2,14 +2,16 @@ DOTFILES_DIR := ${HOME}/dotfiles
 
 .PHONY: init
 init:
-	[ -d ${HOME}.config/nvim/ ] || mkdir -p ${HOME}/.config/nvim/
-	[ -d ${HOME}.config/nvim/lua/ ] || mkdir -p ${HOME}/.config/nvim/lua/
-
-	ln -svf ${DOTFILES_DIR}/nvim/init.lua ${HOME}/.config/nvim/init.lua && \
-	ln -svf ${DOTFILES_DIR}/nvim/lua/plugins.lua ${HOME}/.config/nvim/lua/plugins.lua
+	[ -d ${HOME}/.config/ ] || mkdir -p ${HOME}/.config/
+	cp -rf ${DOTFILES_DIR}/nvim/config ~/.config/nvim
 
 .PHONY: clean
 clean:
-	unlink ${HOME}/.config/nvim/init.lua || true && \
-	unlink ${HOME}/.config/nvim/lua/plugins.lua || true
-	rm -rf ${HOME}.config/nvim/
+	rm -rf ~/.config/nvim
+
+.PHONY: backup
+backup:
+	mv ~/.config/nvim ~/.config/nvim.bak
+	mv ~/.local/share/nvim ~/.local/share/nvim.bak
+	mv ~/.local/state/nvim ~/.local/state/nvim.bak
+	mv ~/.cache/nvim ~/.cache/nvim.bak
